@@ -13,6 +13,15 @@ class SampleCell: UITableViewCell {
     @IBOutlet weak var button: UIButton!
 
     func styleCellWith(color: UIColor) {
+        button = nil
         button?.setTitleColor(color, forState: .Normal)
+
+        if button != nil {
+            button.setTitleColor(color, forState: .Normal)
+        }
+
+        if let button = button {
+            button.setTitleColor(color, forState: .Normal)
+        }
     }
 }
